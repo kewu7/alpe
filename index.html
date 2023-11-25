@@ -61,6 +61,22 @@
             margin: 0; /* Remove margin on both sides */
         }
 
+        .front-image-text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .front-image-text {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5); /* Background color with opacity */
+            padding: 10px; /* Adjust padding as needed */
+            color: #fff;
+            font-size: 30px; /* Adjust font size as needed */
+        }
+
         .content-block {
             display: flex;
             margin-top: 20px;
@@ -249,6 +265,9 @@
         </nav>
     </header>
 
+    <div class="front-image-text-container">
+        <div class="front-image-text">Üks hästi ilus tutvustav lause, kui tublid ja head te olete.</div>
+    </div>
     <img class="full-width-image" src="random.jpg" alt="Random Image">
 
     <section>
