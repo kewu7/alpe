@@ -121,21 +121,21 @@
                     </div>
                 </div>
                 <div class="project-card" onclick="Portfolio.open('sindi')">
-                    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="Sindi–Lodja sild">
+                    <img src="images/sindilodja.jpg" alt="Sindi–Lodja sild">
                     <div class="project-content">
                         <h3>Sindi–Lodja sild</h3>
                         <p>2025</p>
                     </div>
                 </div>
                 <div class="project-card" onclick="Portfolio.open('parnu')">
-                    <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a" alt="Pärnu uus sild">
+                    <img src="images/parnusild1.jpg" alt="Pärnu uus sild">
                     <div class="project-content">
                         <h3>Pärnu uus sild</h3>
                         <p>2023–2025</p>
                     </div>
                 </div>
                 <div class="project-card" onclick="Portfolio.open('masikka')">
-                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="Masikkakoski raudteesild">
+                    <img src="images/Mansikkakoski1.jpg" alt="Masikkakoski raudteesild">
                     <div class="project-content">
                         <h3>Masikkakoski raudteesild</h3>
                         <p>2022–2023</p>
@@ -151,15 +151,16 @@
             <h2>Võta meiega ühendust</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <p><strong>Telefon:</strong> +372 XXX XXXX</p>
+                    <p><strong>Telefon:</strong> +372 5858 6080, +372 5682 3162</p>
                     <p><strong>E-post:</strong> info@alpegroup.ee</p>
                     <p><strong>Tegutsemispiirkond:</strong> Harjumaa, Pärnumaa, Tartumaa – üle Eesti</p>
                 </div>
-                <form id="contactForm">
-                    <input type="text" placeholder="Nimi" required aria-label="Nimi">
-                    <input type="email" placeholder="E-post" required aria-label="E-post">
-                    <textarea rows="5" placeholder="Sõnum" aria-label="Sõnum"></textarea>
-                    <button class="btn-primary" type="submit">Saada päring</button>
+                <form id="contactForm" action="https://formspree.io/f/mvzbzdgw" method="POST">
+                    <input type="text" name="Nimi" placeholder="Nimi" required aria-label="Nimi">
+                    <input type="email" name="E-post" placeholder="E-post" required aria-label="E-post">
+                    <textarea name="Sõnum" rows="5" placeholder="Sõnum" aria-label="Sõnum"></textarea>
+                    <button class="btn-primary" type="submit" id="submit-btn">Saada päring</button>
+                    <div id="form-status-msg"></div>
                 </form>
             </div>
         </div>

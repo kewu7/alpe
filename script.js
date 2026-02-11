@@ -38,21 +38,26 @@ const Portfolio = {
             client: "INF Infra OÜ",
             work: "Objekti üldtööd, betoonitööd, pinnasetööd, montaažitööd, tungimistööd",
             images: [
-                "https://images.unsplash.com/photo-1487956382158-bb926046304a", 
-                "https://images.unsplash.com/photo-1517089534706-33c2ec3b9b31"
+                "images/parnusild1.jpg",
+                "images/parnusild2.jpg",
+                "images/parnusild3.jpg",
+                "images/parnusild5.jpg",
+                "images/parnusild6.jpg",
+                "images/parnusild7.jpg",
+                "images/parnusild8.jpg"
             ]
         },
         masikka: {
             title: "Masikkakoski raudteesild (2022–2023)",
             client: "MPV-Infrarakenne Oy",
             work: "Objekti üldtööd, montaažitööd",
-            images: ["https://images.unsplash.com/photo-1501594907352-04cda38ebc29"]
+            images: ["images/Mansikkakoski1.jpg", "images/Mansikkakoski2.jpg", "images/Mansikkakoski3.jpg"]
         },
         sindi: {
             title: "Sindi–Lodja sild (2025)",
             client: "INF Infra OÜ",
             work: "Objekti üldtööd, raadamine ja kändude freesimine",
-            images: ["https://images.unsplash.com/photo-1492724441997-5dc865305da7"]
+            images: ["images/sindilodja.jpg"]
         },
         kallas: {
             title: "Pärnu kaldakindlustus (2025)",
@@ -134,6 +139,69 @@ window.addEventListener("DOMContentLoaded", () => {
             // Handle form data here (e.g., fetch API)
             console.log("Päring saadetud!"); 
             contactForm.reset();
+        });
+    }
+});
+
+const contactForm = document.getElementById("contactForm");
+const formStatusMsg = document.getElementById("form-status-msg");
+const submitBtn = document.getElementById("submit-btn");
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById("contactForm");
+    const formStatusMsg = document.getElementById("form-status-msg");
+    const submitBtn = document.getElementById("submit-btn");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Saadan...";
+            }
+            
+            const formData = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    if (formStatusMsg) {
+                        formStatusMsg.innerHTML = "Täname! Teie päring on edukalt saadetud.";
+                        formStatusMsg.className = "success";
+                    }
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (formStatusMsg) {
+                            if (Object.hasOwn(data, 'errors')) {
+                                formStatusMsg.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                            } else {
+                                formStatusMsg.innerHTML = "Viga saatmisel. Kontrollige e-posti aadressi seadeid.";
+                            }
+                            formStatusMsg.className = "error";
+                        }
+                    })
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Saada päring";
+                }
+            }).catch(error => {
+                if (formStatusMsg) {
+                    formStatusMsg.innerHTML = "Viga! Palun kontrollige internetiühendust.";
+                    formStatusMsg.className = "error";
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Saada päring";
+                }
+            });
         });
     }
 });
