@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehitus- ja betoonitööd infrastruktuuriobjektidel | Alpe Group OÜ</title>
+    <meta name="description" content="Alpe Group OÜ pakub professionaalseid betooni-, pinnase-, montaaži- ja objektide üldtöid infrastruktuuriobjektidel üle Eesti.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="images/alpelogo.png" alt="Alpe Group logo">
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#about">Meist</a></li>
+                    <li><a href="#services">Teenused</a></li>
+                    <li><a href="#portfolio">Tehtud tööd</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <a href="#contact" class="btn-primary desktop-btn">Küsi pakkumist</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Ehitus- ja betoonitööd infrastruktuuriobjektidel üle Eesti</h1>
+            <p>Professionaalsed betooni-, montaaži- ja üldehitustööd usaldusväärselt ja tähtaegselt.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">Küsi pakkumist</a>
+                <a href="#portfolio" class="btn-secondary">Vaata tehtud töid</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Alpe Group OÜ – lahendustele orienteeritud ehitusettevõte</h2>
+            <p>Alpe Group OÜ on alates 2019. aastast tegutsev Eesti kapitalil põhinev ehitusettevõte, mis on spetsialiseerunud infrastruktuuri- ja üldehitustöödele. Pakume kvaliteetseid betoonitöid, pinnasetöid, montaaži- ja objektide üldtöid nii suurtele kui ka väiksematele ehitusprojektidele.</p>
+            <p>Meie tugevuseks on kiire reageerimine, paindlikkus ning praktiliste lahenduste leidmine ka keerukates ehitustingimustes. Tegutseme peamiselt Harju-, Pärnu- ja Tartumaal, vajadusel üle Eesti.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2>Teenused</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>Betoonitööd</h3>
+                    <p>Armeerimine, raketised, betoneerimine, vundamendid ja keerukad konstruktsioonid.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Pinnasetööd</h3>
+                    <p>Välja- ja tagasikaeve, aluspindade ettevalmistus ja rajamine.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Lammutustööd</h3>
+                    <p>Vaiapeade piikamine ja lõikamine nii masinaga kui käsitsi.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Montaažitööd</h3>
+                    <p>Konstruktsioonide ja elementide paigaldus vastavalt projektile.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Objekti üldtööd</h3>
+                    <p>Heakorratööd, transport, ladustamine ning soojustus-, metalli- ja puidutööd.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Tehtud ehitustööd ja referentsobjektid</h2>
+            <div class="portfolio-grid">
+                <div class="project-card" onclick="Portfolio.open('lagedi')">
+                    <img src="images/lagedi1.jpg" alt="Lagedi rippsild">
+                    <div class="project-content">
+                        <h3>Lagedi rippsild</h3>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="Portfolio.open('veski')">
+                    <img src="images/AJ.jpg" alt="Veskimetsa AJ vundament">
+                    <div class="project-content">
+                        <h3>Veskimetsa AJ vundament</h3>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="Portfolio.open('audru')">
+                    <img src="images/audru.jpg" alt="Audru vaateplatvorm">
+                    <div class="project-content">
+                        <h3>Audru Keskväljaku vaateplatvorm</h3>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="Portfolio.open('kallas')">
+                    <img src="images/kaldakindlus.JPG" alt="Pärnu kaldakindlustus">
+                    <div class="project-content">
+                        <h3>Pärnu kaldakindlustus</h3>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="Portfolio.open('sindi')">
+                    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="Sindi–Lodja sild">
+                    <div class="project-content">
+                        <h3>Sindi–Lodja sild</h3>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="Portfolio.open('parnu')">
+                    <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a" alt="Pärnu uus sild">
+                    <div class="project-content">
+                        <h3>Pärnu uus sild</h3>
+                        <p>2023–2025</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="Portfolio.open('masikka')">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="Masikkakoski raudteesild">
+                    <div class="project-content">
+                        <h3>Masikkakoski raudteesild</h3>
+                        <p>2022–2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2>Võta meiega ühendust</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p><strong>Telefon:</strong> +372 XXX XXXX</p>
+                    <p><strong>E-post:</strong> info@alpegroup.ee</p>
+                    <p><strong>Tegutsemispiirkond:</strong> Harjumaa, Pärnumaa, Tartumaa – üle Eesti</p>
+                </div>
+                <form id="contactForm">
+                    <input type="text" placeholder="Nimi" required aria-label="Nimi">
+                    <input type="email" placeholder="E-post" required aria-label="E-post">
+                    <textarea rows="5" placeholder="Sõnum" aria-label="Sõnum"></textarea>
+                    <button class="btn-primary" type="submit">Saada päring</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Component -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <div class="close-btn" onclick="Portfolio.close()" aria-label="Sulge aken">SULGE ✕</div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            © 2026 Alpe Group OÜ. Kõik õigused kaitstud.
+        </div>
+    </footer>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
