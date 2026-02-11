@@ -145,11 +145,11 @@ nav a:hover { color: var(--accent); }
 
 @media (max-width: 768px) {
     .hero h1 { 
-        font-size: 2rem; 
-        word-break: break-word; /* Lubab murda liiga pikki sõnu nagu "infrastruktuuri-objektidel" */
+        font-size: 1.8rem;
+        /*word-break: break-word;*/
     }
     .hero-btns {
-        justify-content: center; /* Arvutis on vasakul, tahvlis/mobiilis keskel */
+        justify-content: center;
     }
 }
 
