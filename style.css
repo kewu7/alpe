@@ -124,6 +124,32 @@ nav a:hover { color: var(--accent); }
 
 .hero h1 { font-size: 48px; color: var(--white); }
 
+.hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        .hero-btns .btn-primary, 
+        .hero-btns .btn-secondary {
+            white-space: nowrap;
+            min-width: fit-content;
+        }
+
+        @media (max-width: 480px) {
+            .hero-btns {
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .hero-btns a {
+                text-align: center;
+            }
+        }
+
 /* Services Grid */
 .services-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 30px; }
 
