@@ -54,7 +54,6 @@ p { margin-bottom: 15px; }
     padding: 12px 24px;
     text-decoration: none;
     color: var(--white);
-    margin-left: 10px;
     transition: var(--transition);
 }
 
@@ -125,30 +124,37 @@ nav a:hover { color: var(--accent); }
 .hero h1 { font-size: 48px; color: var(--white); }
 
 .hero-btns {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: left;
-        }
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
+    margin-top: 2rem;
+}
 
-        .hero-btns .btn-primary, 
-        .hero-btns .btn-secondary {
-            white-space: nowrap;
-            min-width: fit-content;
-        }
+.hero-btns .btn-primary, 
+.hero-btns .btn-secondary {
+    white-space: nowrap;
+    min-width: 180px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        @media (max-width: 480px) {
-            .hero-btns {
-                flex-direction: column;
-                align-items: stretch;
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            .hero-btns a {
-                text-align: center;
-            }
-        }
+@media (max-width: 480px) {
+    .hero-btns {
+        flex-direction: column;
+        align-items: left;
+        gap: 12px;
+        padding: 0 10%; /* Lisab külgedele õhku */
+    }
+    .hero-btns .btn-primary, 
+    .hero-btns .btn-secondary {
+        width: 100%; /* Nupud on täislaiuses ja seega sama pikkusega */
+        max-width: 280px; /* Piirab laiust, et nupud ei läheks liiga "välja veninud" */
+        box-sizing: border-box;
+    }
+}
 
 /* Services Grid */
 .services-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 30px; }
